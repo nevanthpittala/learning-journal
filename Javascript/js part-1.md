@@ -1,92 +1,396 @@
-The "engine" that runs JavaScript in your browser is a piece of software inside the browser. Chrome uses V8, Firefox uses SpiderMonkey, Safari uses JavaScriptCore. Node.js also uses V8 — that's how JS runs outside a browser.
 
-You have three places to write and run JavaScript.
-### a) Browser Console (fastest): 
- 1. Open any webpage.
- 2. Press `F12` (or right-click → Inspect).
- 3. Click the **Console** tab.
- 4. Type: `2 + 2` and press Enter. You'll see `4`.
-This is perfect for trying out small snippets.
+## 1. Introduction to JavaScript
 
-### b) VS Code + a `.js` file:
- 1. Download **VS Code** (free) from code.visualstudio.com.
- 2. Create a folder, open it in VS Code, create a file called `app.js`.
- 3. Write your code inside it.
+- JavaScript was created by Brendan Eich in 1995.
+- It is used to add interactivity to websites.
+- Today JavaScript is used for:
+  - Frontend development
+  - Backend development (Node.js)
+  - Mobile apps
+  - Desktop apps
 
-### c) Node.js (to run `.js` files outside the browser):
- 1. Install **Node.js** from nodejs.org.
- 2. Open terminal in your folder.
- 3. Run: `node app.js`
-You'll see the output in the terminal.
+JavaScript runs using engines:
+- Chrome → V8
+- Firefox → SpiderMonkey
+- Safari → JavaScriptCore
 
-console.log() prints something to the console. It is the most-used tool in a JS developer's life.
+---
+
+## 2. Running JavaScript
+
+Ways to run JS:
+
+1. Browser Console
+2. VS Code `.js` files
+3. Node.js
+
+Run a JS file:
+
+```bash
+node app.js
+```
+
+---
+
+## 3. console.log()
+
+Used to print output to the console.
+
 ```javascript
-console.log("Hello, World!");
+console.log("Hello World");
 console.log(42);
-console.log("My name is", "Aman", "and I am", 25, "years old");
+console.log(true);
 ```
-You can pass **multiple values** separated by commas, and `console.log` will print them with spaces between.
 
-**Other useful console methods:**
+Other console methods:
 
 ```javascript
-console.log("Normal message");
-console.warn("This is a warning");      // shown in yellow in browsers
-console.error("This is an error");      // shown in red
-console.table([1, 2, 3]);               // prints data as a table
+console.warn("Warning");
+console.error("Error");
+console.table([1,2,3]);
 ```
+
+---
 
 ## 4. Comments
 
-Comments are notes for humans. JavaScript ignores them.
-
-```jsx
-// This is a single-line comment
-
-/*
-   This is a
-   multi-line comment
-*/
-
-console.log("Hello"); // You can also comment at the end of a line
-```
-
-**Why comment?**
-
-- To remind yourself what code does.
-- To temporarily disable code while testing.
-- To explain *why* something is done a certain way.
-
-## 5. Variables — The Heart of Programming
-
-A **variable** is a named box where you store a value. Later, you can use the name to get the value back, or change it.
-
-JavaScript has **three keywords** to declare variables: `var`, `let`, and `const`.
-
-```jsx
-var age = 25;
-let name = "Aman";
-const PI = 3.14159;
-```
-
-### Declaration vs Initialization
-
-- **Declaration:** creating the variable. → `let x;`
-- **Initialization:** giving it a value. → `x = 10;`
-- You can combine both. → `let x = 10;`
+Single-line:
 
 ```javascript
-let city;              // declared, value is undefined
-console.log(city);     // undefined
-city = "Hyderabad";       // initialized now
-console.log(city);     // Hyderabad
+// comment
 ```
 
-### Basic Differences Between var, let, const
+Multi-line:
 
-| Feature | `var` | `let` | `const` |
-| --- | --- | --- | --- |
-| Can re-assign? | Yes | Yes | **No** |
-| Can re-declare in same scope? | Yes | No | No |
-| Scope | Function | Block | Block |
-| Hoisted? | Yes (as `undefined`) | Yes (TDZ) | Yes (TDZ) |
+```javascript
+/*
+multi line comment
+*/
+```
+
+---
+
+# Variables
+
+Variables store values.
+
+Types:
+
+```javascript
+var age = 20;
+let name = "Aman";
+const PI = 3.14;
+```
+
+Modern JS:
+- Prefer `const`
+- Use `let` when value changes
+- Avoid `var`
+
+---
+
+## Declaration vs Initialization
+
+Declaration:
+
+```javascript
+let city;
+```
+
+Initialization:
+
+```javascript
+city = "Bhopal";
+```
+
+Example:
+
+```javascript
+let city;
+console.log(city); // undefined
+
+city = "Bhopal";
+console.log(city);
+```
+
+---
+
+# Data Types
+
+## Primitive Types
+
+| Type | Example |
+|---|---|
+| string | "Hello" |
+| number | 10, 5.5 |
+| boolean | true / false |
+| null | empty value |
+| undefined | no value assigned |
+| symbol | unique id |
+| bigint | large numbers |
+
+## Non Primitive
+
+- Objects
+- Arrays
+- Functions
+
+---
+
+# typeof Operator
+
+Checks datatype.
+
+```javascript
+typeof "hello"; 
+// string
+
+typeof 10;
+// number
+
+typeof null;
+// object (JS bug)
+```
+
+---
+
+# Type Conversion
+
+Manual conversion:
+
+```javascript
+Number("42");
+String(100);
+Boolean("hello");
+```
+
+Automatic conversion:
+
+```javascript
+"5" + 3 // "53"
+
+"5" - 3 // 2
+```
+
+---
+
+# Truthy and Falsy
+
+Falsy values:
+
+```
+false
+0
+""
+null
+undefined
+NaN
+```
+
+Everything else is truthy.
+
+---
+
+# Operators
+
+## Arithmetic
+
+```javascript
++
+-
+*
+/
+%
+**
+```
+
+## Comparison
+
+Always prefer:
+
+```javascript
+=== 
+!==
+```
+
+Avoid:
+
+```javascript
+==
+!=
+```
+
+---
+
+# Logical Operators
+
+AND:
+
+```javascript
+true && false
+```
+
+OR:
+
+```javascript
+true || false
+```
+
+NOT:
+
+```javascript
+!true
+```
+
+---
+
+# Strings
+
+Creating strings:
+
+```javascript
+let name = "Aman";
+```
+
+Template literals:
+
+```javascript
+console.log(`Hello ${name}`);
+```
+
+Useful methods:
+
+```javascript
+toUpperCase()
+toLowerCase()
+includes()
+slice()
+replace()
+split()
+trim()
+```
+
+Strings are immutable.
+
+---
+
+# Numbers
+
+JavaScript has one number type.
+
+Useful methods:
+
+```javascript
+Number()
+parseInt()
+parseFloat()
+toFixed()
+```
+
+Math:
+
+```javascript
+Math.round()
+Math.floor()
+Math.ceil()
+Math.random()
+Math.max()
+Math.min()
+```
+
+---
+
+# Conditionals
+
+if else:
+
+```javascript
+if(condition){
+
+}else{
+
+}
+```
+
+switch:
+
+```javascript
+switch(value){
+ case 1:
+ break;
+}
+```
+
+---
+
+# Loops
+
+for:
+
+```javascript
+for(let i=0;i<5;i++){
+ console.log(i);
+}
+```
+
+while:
+
+```javascript
+while(condition){
+
+}
+```
+
+do while:
+
+```javascript
+do{
+
+}while(condition)
+```
+
+---
+
+# Loop Control
+
+Stop loop:
+
+```javascript
+break;
+```
+
+Skip iteration:
+
+```javascript
+continue;
+```
+
+---
+
+# User Input
+
+Browser:
+
+```javascript
+let name = prompt("Enter name");
+```
+
+Convert input:
+
+```javascript
+let age = Number(prompt("Age"));
+```
+
+---
+
+## Learning Status ✅
+
+Covered:
+- JS basics
+- Variables
+- Data types
+- Operators
+- Strings
+- Numbers
+- Conditions
+- Loops
