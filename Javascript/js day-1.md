@@ -1,4 +1,3 @@
-
 ## 1. Introduction to JavaScript
 
 - JavaScript was created by Brendan Eich in 1995.
