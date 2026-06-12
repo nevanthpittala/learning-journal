@@ -75,11 +75,12 @@ const PI = 3.14159;
 - **Initialization:** giving it a value. → `x = 10;`
 - You can combine both. → `let x = 10;`
 
+```javascript
 let city;              // declared, value is undefined
 console.log(city);     // undefined
-city = "Bhopal";       // initialized now
-console.log(city);     // Bhopal
-
+city = "Hyderabad";       // initialized now
+console.log(city);     // Hyderabad
+```
 
 ### Basic Differences Between var, let, const
 
