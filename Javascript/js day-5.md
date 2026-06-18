@@ -1,9 +1,3 @@
-# JavaScript Async Programming 🚀
-
-Complete notes covering asynchronous JavaScript concepts including callbacks, promises, async/await, event loop, Fetch API, and JSON handling.
-
----
-
 # 1. Synchronous vs Asynchronous JavaScript
 
 ## Synchronous
@@ -511,31 +505,3 @@ Used when receiving data.
 | JSON.stringify | Object → JSON |
 | JSON.parse | JSON → Object |
 
----
-
-# Learning Order
-
-1. Synchronous vs Asynchronous
-2. Callbacks
-3. Timers
-4. Callback Hell
-5. Promises
-6. Promise Methods
-7. Async/Await
-8. Event Loop
-9. Fetch API
-10. JSON
-
----
-
-## Completed Topics ✅
-
-- Async JavaScript
-- Callbacks
-- Timers
-- Promises
-- Async/Await
-- Event Loop
-- Fetch API
-- JSON
-- Interview Concepts
