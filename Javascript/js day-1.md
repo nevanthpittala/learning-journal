@@ -382,14 +382,3 @@ let age = Number(prompt("Age"));
 
 ---
 
-## Learning Status ✅
-
-Covered:
-- JS basics
-- Variables
-- Data types
-- Operators
-- Strings
-- Numbers
-- Conditions
-- Loops
