@@ -490,27 +490,3 @@ Most common pattern:
 ]
 ```
 
----
-
-# Mini Projects Completed 🛠️
-
-- Todo List
-- Student Grade Tracker
-- Shopping Cart
-- Word Counter
-- Library Management System
-
----
-
-# Important Concepts ✅
-
-- Functions
-- Callbacks
-- Higher Order Functions
-- Array methods
-- Objects
-- Destructuring
-- Spread/Rest
-- Arrays of Objects
-
-JavaScript Phase 2 Completed 🎯
